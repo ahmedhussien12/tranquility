@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  bool isHidden = true;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +34,34 @@ class Login extends StatelessWidget {
                 Text(
                   "Tranquility",
                   style: TextStyle(
-                      fontSize: 48, color: Theme.of(context).primaryColor,fontFamily: "Courgette"),
+                      fontSize: 48,
+                      color: Theme.of(context).primaryColor,
+                      fontFamily: "Courgette"),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextFormField(
+                  keyboardType: TextInputType.phone,
+                  decoration: InputDecoration(labelText: "Phone Number"),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                TextFormField(
+                  obscureText: isHidden,
+                  obscuringCharacter: "*",
+                  decoration: InputDecoration(
+                    labelText: "Password",
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                          isHidden ? Icons.visibility_off : Icons.visibility),
+                      onPressed: () {
+                        isHidden = !isHidden;
+                        setState(() {});
+                      },
+                    ),
+                  ),
                 ),
               ],
             ),

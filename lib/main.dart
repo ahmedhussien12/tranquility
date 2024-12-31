@@ -31,6 +31,16 @@ class MyApp extends StatelessWidget {
             900: primary
           }),
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Color(0xffACACAC).withOpacity(.1),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8)
+          ),
+          enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8)
+          ),
+        ),
       ),
       home: Login(),
     );
