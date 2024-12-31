@@ -34,11 +34,29 @@ class MyApp extends StatelessWidget {
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Color(0xffACACAC).withOpacity(.1),
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8)
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+          enabledBorder:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+        ),
+        filledButtonTheme: FilledButtonThemeData(
+          style: FilledButton.styleFrom(
+            textStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+            ),
+            fixedSize: Size.fromHeight(60),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
           ),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8)
+        ),
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            textStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+              color: Theme.of(context).primaryColor
+            ),
           ),
         ),
       ),

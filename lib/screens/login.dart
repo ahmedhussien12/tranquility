@@ -18,7 +18,7 @@ class _LoginState extends State<Login> {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 52, horizontal: 24),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Image.asset(
                   "asset/images/login.png",
@@ -62,6 +62,30 @@ class _LoginState extends State<Login> {
                       },
                     ),
                   ),
+                ),
+                Align(
+                  alignment: AlignmentDirectional.centerEnd,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text("Forget Password?"),
+                  ),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+                FilledButton(
+                  onPressed: () {},
+                  child: Text("Login"),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Don't Have an Account?"),
+                    TextButton(onPressed: () {}, child: Text("SignUp"))
+                  ],
                 ),
               ],
             ),
