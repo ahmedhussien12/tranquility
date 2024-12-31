@@ -1,7 +1,24 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-class Splash extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:secondproject/core/helper.dart';
+import 'package:secondproject/screens/login.dart';
+
+class Splash extends StatefulWidget {
   const Splash({super.key});
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    Timer(Duration(seconds: 3), () {
+      navigateTo(Login(), keepHistory: false);
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

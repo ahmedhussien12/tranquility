@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondproject/core/helper.dart';
 import 'package:secondproject/screens/login.dart';
 import 'package:secondproject/screens/splash.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
@@ -60,7 +62,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Login(),
+      home: Splash(),
     );
   }
 }
