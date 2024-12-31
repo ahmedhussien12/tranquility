@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:secondproject/core/helper.dart';
+import 'package:secondproject/screens/forget_password.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -66,7 +68,9 @@ class _LoginState extends State<Login> {
                 Align(
                   alignment: AlignmentDirectional.centerEnd,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      navigateTo(ForgetPassword(), keepHistory: true);
+                    },
                     child: Text("Forget Password?"),
                   ),
                 ),

@@ -59,6 +59,7 @@ flutter:
   uses-material-design: true
   assets:
     - asset/images/login.png
+    - asset/images/forget_password.png
 
 
 
