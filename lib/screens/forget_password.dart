@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secondproject/core/designs/app_images.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -13,7 +14,10 @@ class ForgetPassword extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset("asset/images/forget_password.png"),
+                AppImages(
+                  path: "forget_password.png",
+                  height: 220,
+                ),
                 SizedBox(
                   height: 16,
                 ),

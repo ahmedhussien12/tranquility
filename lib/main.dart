@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:secondproject/core/helper.dart';
-import 'package:secondproject/screens/login.dart';
+import 'package:secondproject/core/logic/helper.dart';
 import 'package:secondproject/screens/splash.dart';
 
 const primary = Color(0xff284243);

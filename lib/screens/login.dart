@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:secondproject/core/helper.dart';
+import 'package:secondproject/core/designs/app_images.dart';
+import 'package:secondproject/core/logic/helper.dart';
 import 'package:secondproject/screens/forget_password.dart';
 
 class Login extends StatefulWidget {
@@ -22,8 +23,8 @@ class _LoginState extends State<Login> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Image.asset(
-                  "asset/images/login.png",
+                AppImages(
+                  path: "login.png",
                   height: 220,
                 ),
                 SizedBox(
