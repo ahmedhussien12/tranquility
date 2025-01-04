@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:secondproject/core/designs/app_button.dart';
 import 'package:secondproject/core/designs/app_images.dart';
-import 'package:secondproject/core/designs/app_input.dart';
+import 'package:secondproject/core/designs/app_otp.dart';
 
 class Verification extends StatelessWidget {
   const Verification({super.key});
@@ -39,22 +38,7 @@ class Verification extends StatelessWidget {
                       color: Theme.of(context).primaryColor.withOpacity(.67)),
                 ),
                 SizedBox(height: 33),
-                PinCodeTextField(
-                  appContext: context,
-                  length: 4,
-                  keyboardType: TextInputType.phone,
-                  backgroundColor: Colors.transparent,
-                  cursorColor: Theme.of(context).primaryColor,
-                  enableActiveFill: true,
-                  pinTheme: PinTheme(
-                      shape: PinCodeFieldShape.box,
-                      fieldHeight: 60,
-                      fieldWidth: 70,
-                      selectedColor: Theme.of(context).primaryColor,
-                      inactiveColor:
-                          Theme.of(context).primaryColor.withOpacity(.67),
-                      activeColor: Theme.of(context).primaryColor),
-                ),
+                AppOtp(),
                 SizedBox(
                   height: 16,
                 ),

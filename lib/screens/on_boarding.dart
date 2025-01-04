@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:secondproject/core/designs/app_images.dart';
 import 'package:secondproject/core/logic/helper.dart';
@@ -19,6 +18,7 @@ class _OnBoardingState extends State<OnBoarding> {
     "I'm your friendly neighborhood chatbot ready to assist you with any questions or concerns.",
     "Our platform prioritizes your privacy and security"
   ];
+  final pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +26,22 @@ class _OnBoardingState extends State<OnBoarding> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppImages(
-            path: "on_boarding$currentPage.jpg",
+          SizedBox(
             height: MediaQuery.of(context).size.height * .65,
             width: MediaQuery.of(context).size.width,
+            child: PageView.builder(
+              controller: pageController,
+              onPageChanged: (value) {
+                currentPage = value + 1;
+                setState(() {});
+              },
+              itemBuilder: (context, index) => AppImages(
+                path: "on_boarding${index + 1}.jpg",
+                height: MediaQuery.of(context).size.height * .65,
+                width: MediaQuery.of(context).size.width,
+              ),
+              itemCount: title.length,
+            ),
           ),
           SizedBox(height: 24),
           Padding(
@@ -48,27 +60,29 @@ class _OnBoardingState extends State<OnBoarding> {
                   desc[currentPage - 1],
                   style: TextStyle(fontSize: 22),
                 ),
-                SizedBox(height: 74,),
+                SizedBox(
+                  height: 74,
+                ),
                 Row(
                   children: [
-                    if(currentPage!=3)
-                    TextButton(
-                      onPressed: () {
-                        navigateTo(Login(),keepHistory: false);
-                      },
-                      child: Text("Skip"),
-                    ),
+                    if (currentPage != 3)
+                      TextButton(
+                        onPressed: () {
+                          navigateTo(Login(), keepHistory: false);
+                        },
+                        child: Text("Skip"),
+                      ),
                     Spacer(),
                     FloatingActionButton(
                       onPressed: () {
-                        if(currentPage<3){
-                          currentPage++;
-                        }else if(currentPage>2){
-                          navigateTo(Login(),keepHistory: false);
+                        if (currentPage < 3) {
+                          pageController.nextPage(
+                              duration: Duration(seconds: 1),
+                              curve: Curves.linear);
+                        } else if (currentPage > 2) {
+                          navigateTo(Login(), keepHistory: false);
                         }
-                        setState(() {
-
-                        });
+                        setState(() {});
                       },
                       child: AppImages(path: "forward.png"),
                     )
