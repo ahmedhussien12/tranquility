@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:secondproject/core/designs/app_button.dart';
 import 'package:secondproject/core/designs/app_images.dart';
+import 'package:secondproject/core/designs/app_input.dart';
 import 'package:secondproject/core/logic/helper.dart';
 import 'package:secondproject/screens/forget_password.dart';
 
@@ -44,27 +46,17 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 10,
                 ),
-                TextFormField(
+                AppInput(
+                  label: "Phone Number",
                   keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(labelText: "Phone Number"),
                 ),
                 SizedBox(
                   height: 16,
                 ),
-                TextFormField(
-                  obscureText: isHidden,
-                  obscuringCharacter: "*",
-                  decoration: InputDecoration(
-                    labelText: "Password",
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                          isHidden ? Icons.visibility_off : Icons.visibility),
-                      onPressed: () {
-                        isHidden = !isHidden;
-                        setState(() {});
-                      },
-                    ),
-                  ),
+                AppInput(
+                  label: "Password",
+                  keyboardType: TextInputType.text,
+                  isPassword: true,
                 ),
                 Align(
                   alignment: AlignmentDirectional.centerEnd,
@@ -78,9 +70,9 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 24,
                 ),
-                FilledButton(
+                AppButton(
                   onPressed: () {},
-                  child: Text("Login"),
+                  text: "Login",
                 ),
                 SizedBox(
                   height: 40,

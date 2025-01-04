@@ -39,16 +39,9 @@ class AppImages extends StatelessWidget {
   }
 
   Widget _errorWidget(context, error, stacktrace) {
-    return Container(
-      height: height,
-      width: width,
-      child: Center(
-          child: Text(
-        "error 404",
-        style: TextStyle(
-          fontSize: 20,
-        ),
-      )),
+    return AppImages(
+      path: "image_failed.png",
+      height: 220,
     );
   }
 }

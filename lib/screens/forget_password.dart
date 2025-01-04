@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:secondproject/core/designs/app_button.dart';
 import 'package:secondproject/core/designs/app_images.dart';
+import 'package:secondproject/core/designs/app_input.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -7,6 +9,8 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -28,17 +32,14 @@ class ForgetPassword extends StatelessWidget {
                   "Forget Password",
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
-                TextFormField(
+                AppInput(
+                  label: "Phone Number",
                   keyboardType: TextInputType.phone,
-                  decoration: InputDecoration(labelText: "Phone Number"),
                 ),
                 SizedBox(
                   height: 16,
                 ),
-                FilledButton(
-                  onPressed: () {},
-                  child: Text("Forget Paswword"),
-                ),
+                AppButton(onPressed: (){},text: "Forget Password",)
               ],
             ),
           ),
