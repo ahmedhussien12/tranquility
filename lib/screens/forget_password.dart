@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:secondproject/core/designs/app_button.dart';
 import 'package:secondproject/core/designs/app_images.dart';
 import 'package:secondproject/core/designs/app_input.dart';
+import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/screens/verification.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({super.key});
@@ -23,15 +25,13 @@ class ForgetPassword extends StatelessWidget {
                   height: 220,
                 ),
                 SizedBox(
-                  height: 16,
-                ),
-                SizedBox(
-                  height: 16,
+                  height: 24,
                 ),
                 Text(
                   "Forget Password",
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 24),
                 ),
+                SizedBox(height: 33),
                 AppInput(
                   label: "Phone Number",
                   keyboardType: TextInputType.phone,
@@ -39,7 +39,9 @@ class ForgetPassword extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                AppButton(onPressed: (){},text: "Forget Password",)
+                AppButton(onPressed: (){
+                  navigateTo(Verification(),keepHistory: true);
+                },text: "Forget Password",)
               ],
             ),
           ),
