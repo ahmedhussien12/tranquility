@@ -18,7 +18,7 @@ class Verification extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 AppImages(
-                  path: "otp.png",
+                  "otp.png",
                   height: 220,
                 ),
                 SizedBox(

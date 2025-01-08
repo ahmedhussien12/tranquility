@@ -22,17 +22,19 @@ class _AppInputState extends State<AppInput> {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: widget.keyboardType,
-      obscureText: isHidden&&widget.isPassword,
+      obscureText: isHidden && widget.isPassword,
       obscuringCharacter: "*",
       decoration: InputDecoration(
         labelText: widget.label,
-        suffixIcon: widget.isPassword? IconButton(
-          icon: Icon(isHidden ? Icons.visibility_off : Icons.visibility),
-          onPressed: () {
-            isHidden = !isHidden;
-            setState(() {});
-          },
-        ):null,
+        suffixIcon: widget.isPassword
+            ? IconButton(
+                icon: Icon(isHidden ? Icons.visibility_off : Icons.visibility),
+                onPressed: () {
+                  isHidden = !isHidden;
+                  setState(() {});
+                },
+              )
+            : null,
       ),
     );
   }

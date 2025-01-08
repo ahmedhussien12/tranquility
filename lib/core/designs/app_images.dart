@@ -4,44 +4,59 @@ import 'package:flutter_svg/flutter_svg.dart';
 class AppImages extends StatelessWidget {
   final String path;
   final double? height, width;
-  final Color? color;
   final BoxFit fit;
+  final Color? color;
 
-  const AppImages(
-      {super.key,
-      required this.path,
+  const AppImages(this.path,
+      {Key? key,
       this.height,
       this.width,
-      this.color,
-      this.fit = BoxFit.scaleDown});
+      this.fit = BoxFit.scaleDown,
+      this.color})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if (path.startsWith("http")) {
-      return Image.network(path,
-          height: height,
-          width: width,
-          color: color,
-          fit: fit,
-          errorBuilder: _errorWidget);
-    } else if (path.endsWith("svg")) {
+    if (path.endsWith("svg")) {
       return SvgPicture.asset(
+        "asset/svg/$path",
+        height: height,
+        width: width,
+        fit: fit,
+        colorFilter: color != null
+            ? ColorFilter.mode(
+                color!,
+                BlendMode.srcIn,
+              )
+            : null,
+      );
+    } else if (path.endsWith("http")) {
+      return Image.network(
+        path,
+        height: height,
+        width: width,
+        fit: fit,
+        color: color,
+        errorBuilder: (context, error, stackTrace) => _errorWidget(),
+      );
+    } else if (path.endsWith("png") || path.endsWith("jpg")) {
+      return Image.asset(
         "asset/images/$path",
         height: height,
         width: width,
         fit: fit,
-        colorFilter:
-            ColorFilter.mode(color ?? Colors.transparent, BlendMode.srcIn),
+        color: color,
+        errorBuilder: (context, error, stackTrace) => _errorWidget(),
       );
     }
-    return Image.asset("asset/images/$path",
-        height: height, color: color, fit: fit, errorBuilder: _errorWidget);
+    return _errorWidget();
   }
 
-  Widget _errorWidget(context, error, stacktrace) {
+  Widget _errorWidget() {
     return AppImages(
-      path: "image_failed.png",
-      height: 220,
+      "image_failed.png",
+      height: height,
+      width: width,
     );
   }
 }

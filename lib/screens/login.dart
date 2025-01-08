@@ -26,7 +26,7 @@ class _LoginState extends State<Login> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 AppImages(
-                  path: "login.png",
+                  "login.png",
                   height: 220,
                 ),
                 SizedBox(

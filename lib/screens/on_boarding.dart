@@ -36,7 +36,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 setState(() {});
               },
               itemBuilder: (context, index) => AppImages(
-                path: "on_boarding${index + 1}.jpg",
+                "on_boarding${index + 1}.jpg",
                 height: MediaQuery.of(context).size.height * .65,
                 width: MediaQuery.of(context).size.width,
               ),
@@ -84,7 +84,7 @@ class _OnBoardingState extends State<OnBoarding> {
                         }
                         setState(() {});
                       },
-                      child: AppImages(path: "forward.png"),
+                      child: AppImages("forward.png"),
                     )
                   ],
                 )

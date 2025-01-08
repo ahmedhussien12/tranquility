@@ -11,8 +11,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -21,7 +20,7 @@ class ForgetPassword extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 AppImages(
-                  path: "forget_password.png",
+                  "forget_password.png",
                   height: 220,
                 ),
                 SizedBox(
@@ -29,7 +28,7 @@ class ForgetPassword extends StatelessWidget {
                 ),
                 Text(
                   "Forget Password",
-                  style: TextStyle(fontWeight: FontWeight.w500,fontSize: 24),
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 24),
                 ),
                 SizedBox(height: 33),
                 AppInput(
@@ -39,9 +38,12 @@ class ForgetPassword extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                AppButton(onPressed: (){
-                  navigateTo(Verification(),keepHistory: true);
-                },text: "Forget Password",)
+                AppButton(
+                  onPressed: () {
+                    navigateTo(Verification(), keepHistory: true);
+                  },
+                  text: "Forget Password",
+                )
               ],
             ),
           ),

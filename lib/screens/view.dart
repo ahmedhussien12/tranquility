@@ -27,8 +27,7 @@ class _ViewsState extends State<Views> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: AppImages(
-          path: "teenyicons_chatbot-outline.svg",
-          color: Colors.white,
+          "teenyicons_chatbot-outline.svg",
         ),
       ),
       body: pages[currentIndex],
@@ -42,12 +41,11 @@ class _ViewsState extends State<Views> {
           icons.length,
           (index) => BottomNavigationBarItem(
             icon: AppImages(
-              path: icons[index],
+              icons[index],
               color: Colors.white.withOpacity(0.3),
             ),
             activeIcon: AppImages(
-              path: icons[index],
-              color: Colors.white,
+              icons[index],
             ),
             label: titles[index],
           ),
@@ -56,4 +54,3 @@ class _ViewsState extends State<Views> {
     );
   }
 }
-

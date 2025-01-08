@@ -18,54 +18,74 @@ class _ChatsState extends State<Chats> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
-        title: Text("Chats"),
+        title: Text("Chats",style: TextStyle(fontWeight: FontWeight.bold),),
       ),
-      body: ListView.separated(
-        padding: EdgeInsets.all(16),
-        itemBuilder: (context, index) => Row(
-          children: [
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.black),
-                    color: Theme.of(context).primaryColor.withOpacity(.1)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      list[index].titles,
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      list[index].dates,
-                      style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
-                    ),
-                  ],
-                ),
+      body: list.isEmpty
+          ? Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  AppImages(
+                    "chats.svg",
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.fill,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  Text(
+                    "You don’t have any Chats yet.",
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  )
+                ],
               ),
-            ),
-            IconButton(
-              icon: AppImages(
-                path: "delete.svg",
-                color: Colors.red,
-              ),
-              onPressed: () {
-                list.removeAt(index);
-                setState(() {});
-              },
             )
-          ],
-        ),
-        separatorBuilder: (context, index) => SizedBox(
-          height: 16,
-        ),
-        itemCount: list.length,
-      ),
+          : ListView.separated(
+              padding: EdgeInsets.all(16),
+              itemBuilder: (context, index) => Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.black),
+                          color:
+                              Theme.of(context).primaryColor.withOpacity(.1)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            list[index].titles,
+                            style: TextStyle(
+                                fontSize: 13, fontWeight: FontWeight.w500),
+                          ),
+                          Text(
+                            list[index].dates,
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.w500),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    icon: AppImages(
+                      "delete.svg",
+                    ),
+                    onPressed: () {
+                      list.removeAt(index);
+                      setState(() {});
+                    },
+                  )
+                ],
+              ),
+              separatorBuilder: (context, index) => SizedBox(
+                height: 16,
+              ),
+              itemCount: list.length,
+            ),
     );
   }
 }

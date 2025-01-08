@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/screens/assistant.dart';
 import 'package:secondproject/screens/view.dart';
 
 import 'core/logic/app_theme.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: Views(),
+      home: Assistant(),
     );
   }
 }
