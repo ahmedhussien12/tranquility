@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:secondproject/core/designs/app_images.dart';
+import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/screens/assistant.dart';
 import 'package:secondproject/screens/home/pages/Quotes.dart';
 import 'package:secondproject/screens/home/pages/chats.dart';
 import 'package:secondproject/screens/home/pages/profile.dart';
@@ -25,7 +27,9 @@ class _ViewsState extends State<Views> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          navigateTo(Assistant(),keepHistory: true);
+        },
         child: AppImages(
           "teenyicons_chatbot-outline.svg",
         ),

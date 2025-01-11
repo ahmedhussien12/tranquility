@@ -4,6 +4,7 @@ import 'package:secondproject/core/designs/app_images.dart';
 import 'package:secondproject/core/designs/app_input.dart';
 import 'package:secondproject/core/logic/helper.dart';
 import 'package:secondproject/screens/forget_password.dart';
+import 'package:secondproject/screens/view.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -71,7 +72,9 @@ class _LoginState extends State<Login> {
                   height: 24,
                 ),
                 AppButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    navigateTo(Views(),keepHistory: false);
+                  },
                   text: "Login",
                 ),
                 SizedBox(

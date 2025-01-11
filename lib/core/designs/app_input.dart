@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppInput extends StatefulWidget {
   final String label;
+  final String? hint;
   final TextInputType? keyboardType;
   final bool isPassword;
 
@@ -9,7 +10,8 @@ class AppInput extends StatefulWidget {
       {super.key,
       required this.label,
       this.keyboardType,
-      this.isPassword = false});
+      this.isPassword = false,
+      this.hint});
 
   @override
   State<AppInput> createState() => _AppInputState();
@@ -26,6 +28,7 @@ class _AppInputState extends State<AppInput> {
       obscuringCharacter: "*",
       decoration: InputDecoration(
         labelText: widget.label,
+        hintText: widget.hint,
         suffixIcon: widget.isPassword
             ? IconButton(
                 icon: Icon(isHidden ? Icons.visibility_off : Icons.visibility),
