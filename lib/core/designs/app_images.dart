@@ -30,7 +30,7 @@ class AppImages extends StatelessWidget {
               )
             : null,
       );
-    } else if (path.endsWith("http")) {
+    } else if (path.startsWith("http")) {
       return Image.network(
         path,
         height: height,

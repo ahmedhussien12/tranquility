@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: Splash(),
+      home: Views(),
     );
   }
 }
