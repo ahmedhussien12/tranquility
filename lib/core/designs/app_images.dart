@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -17,7 +19,16 @@ class AppImages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (path.endsWith("svg")) {
+    if (path.contains("com.example.secondproject/cache")) {
+      return Image.file(
+        File(path),
+        color: color,
+        height: height,
+        width: width,
+        fit: fit,
+        errorBuilder: (context, error, stackTrace) => _errorWidget(),
+      );
+    } else if (path.endsWith("svg")) {
       return SvgPicture.asset(
         "asset/svg/$path",
         height: height,

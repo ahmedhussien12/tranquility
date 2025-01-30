@@ -28,14 +28,6 @@ class _QuotesState extends State<Quotes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: Text(
-          "Quotes",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-      ),
       body: Stack(
         alignment: Alignment.center,
         children: [

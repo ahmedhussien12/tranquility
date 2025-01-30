@@ -4,16 +4,21 @@ import 'package:secondproject/core/designs/app_button.dart';
 import 'package:secondproject/core/designs/app_images.dart';
 import 'package:secondproject/core/designs/app_input.dart';
 
-class Profile extends StatelessWidget {
+const profileImage = "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg";
+class Profile extends StatefulWidget {
   const Profile({super.key});
+
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  XFile? selectedImage;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
-        appBar: AppBar(
-          title: Text("Edit Profile"),
-        ),
+
         body: ListView(
           padding: EdgeInsets.all(24),
           children: [
@@ -26,7 +31,9 @@ class Profile extends StatelessWidget {
                   children: [
                     ClipOval(
                       child: AppImages(
-                        "https://img.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_1258-59335.jpg",
+                        selectedImage != null
+                            ? selectedImage!.path
+                            : profileImage,
                         height: 160,
                         width: 160,
                         fit: BoxFit.cover,
@@ -56,27 +63,33 @@ class Profile extends StatelessWidget {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Column(
-                                        children: [
-                                          AppImages("camera.svg"),
-                                          SizedBox(
-                                            height: 4,
+                                      GestureDetector(
+                                        onTap: () =>
+                                            chooseImage(ImageSource.camera),
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          child: Column(
+                                            children: [
+                                              AppImages("camera.svg"),
+                                              SizedBox(
+                                                height: 4,
+                                              ),
+                                              Text(
+                                                "Camera",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontSize: 16),
+                                              ),
+                                            ],
                                           ),
-                                          Text(
-                                            "Camera",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 16),
-                                          ),
-                                        ],
+                                        ),
                                       ),
                                       SizedBox(
                                         width: 72,
                                       ),
                                       GestureDetector(
-                                        onTap: () {
-                                          ImagePicker().pickImage(source: ImageSource.camera);
-                                        },
+                                        onTap: () =>
+                                            chooseImage(ImageSource.gallery),
                                         child: Container(
                                           color: Colors.transparent,
                                           child: Column(
@@ -153,5 +166,16 @@ class Profile extends StatelessWidget {
             )
           ],
         ));
+  }
+
+  void chooseImage(ImageSource source) async {
+    XFile? result = await ImagePicker().pickImage(source: source);
+    print("result: ");
+    print(result?.path);
+    Navigator.pop(context);
+    if (result != null) {
+      selectedImage = result;
+      setState(() {});
+    }
   }
 }

@@ -33,13 +33,6 @@ class _ChatsState extends State<Chats> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
-      appBar: AppBar(
-        title: Text(
-          "Chats",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ),
       body: isLoading
           ? Center(
               child: CircularProgressIndicator(),
