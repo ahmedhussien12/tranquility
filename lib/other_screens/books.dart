@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:secondproject/core/designs/app_images.dart';
+import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/other_screens/book_detail.dart';
 
 class Books extends StatefulWidget {
   const Books({super.key});
@@ -11,6 +13,35 @@ class Books extends StatefulWidget {
 class _BooksState extends State<Books> {
   final list = [
     BookModel(
+        title: "250 تقنية في التلاعب النفسي ",
+        desc: "علم النفس",
+        image:
+            "https://www.noor-book.com/publice/covers_cache_webp/2/b/8/b/e8debbe4eeb8b147e14ae1bfb7d74f8b.JPG.webp"),
+    BookModel(
+        title: "الداء والدواء ",
+        desc: "طب و علاجيات",
+        image:
+            "https://www.noor-book.com/publice/covers_cache_webp/5/6/f/1/37c0e52fcb6f1d3f8d7171731c72f1fc.png.webp"),
+    BookModel(
+        title: "على أجنحة العصافير",
+        desc: "حيوانات",
+        image:
+            "https://www.noor-book.com/publice/covers_cache_webp/2/5/c/b/109f46602e5cbfaced14ed38e3d7cabc.jpeg.webp"),
+    BookModel(
+        title: "250 تقنية في التلاعب النفسي ",
+        desc: "علم النفس",
+        image:
+            "https://www.noor-book.com/publice/covers_cache_webp/2/b/8/b/e8debbe4eeb8b147e14ae1bfb7d74f8b.JPG.webp"),
+    BookModel(
+        title: "250 تقنية في التلاعب النفسي ",
+        desc: "علم النفس",
+        image:
+            "https://www.noor-book.com/publice/covers_cache_webp/5/6/f/1/37c0e52fcb6f1d3f8d7171731c72f1fc.png.webp"),
+    BookModel(
+        title: "250 تقنية في التلاعب النفسي ",
+        desc: "علم النفس",
+        image:
+            "https://www.noor-book.com/publice/covers_cache_webp/2/b/8/b/e8debbe4eeb8b147e14ae1bfb7d74f8b.JPG.webp"),BookModel(
         title: "250 تقنية في التلاعب النفسي ",
         desc: "علم النفس",
         image:
@@ -120,25 +151,28 @@ class _item extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: AppImages(
-                model.image,
-                fit: BoxFit.cover,
-                height: 230,
-                width: 195,
+    return GestureDetector(
+      onTap: (){navigateTo(BookDetail(model: model));},
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: AppImages(
+                  model.image,
+                  fit: BoxFit.cover,
+                  height: 230,
+                  width: 195,
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 8,),
-          Text(model.title,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.white),),
-          Text(model.desc,style: TextStyle(fontSize: 10,color: Colors.white),)
-        ],
+            SizedBox(height: 8,),
+            Text(model.title,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.white),),
+            Text(model.desc,style: TextStyle(fontSize: 10,color: Colors.white),)
+          ],
+        ),
       ),
     );
   }

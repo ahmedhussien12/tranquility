@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/other_screens/whats_app.dart';
 import 'package:secondproject/screens/assistant.dart';
 import 'package:secondproject/screens/home/about_us.dart';
 import 'package:secondproject/screens/login.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: Splash(),
+      home: WhatsApp(),
     );
   }
 }
