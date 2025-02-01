@@ -41,7 +41,8 @@ class _BooksState extends State<Books> {
         title: "250 تقنية في التلاعب النفسي ",
         desc: "علم النفس",
         image:
-            "https://www.noor-book.com/publice/covers_cache_webp/2/b/8/b/e8debbe4eeb8b147e14ae1bfb7d74f8b.JPG.webp"),BookModel(
+            "https://www.noor-book.com/publice/covers_cache_webp/2/b/8/b/e8debbe4eeb8b147e14ae1bfb7d74f8b.JPG.webp"),
+    BookModel(
         title: "250 تقنية في التلاعب النفسي ",
         desc: "علم النفس",
         image:
@@ -74,7 +75,7 @@ class _BooksState extends State<Books> {
   ];
 
   @override
-  Widget build(BuildContext context)  {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff333333),
       body: DefaultTabController(
@@ -129,15 +130,14 @@ class _BooksState extends State<Books> {
             ),
             Expanded(
               child: GridView.builder(
-                padding: EdgeInsets.all(16),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 8,
-                    mainAxisSpacing: 8,
-                    childAspectRatio: 197 / 277),
-                itemCount: list.length,
-                itemBuilder: (context, index) =>_item(model: list[index])
-              ),
+                  padding: EdgeInsets.all(16),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 8,
+                      mainAxisSpacing: 8,
+                      childAspectRatio: 197 / 277),
+                  itemCount: list.length,
+                  itemBuilder: (context, index) => _item(model: list[index])),
             ),
           ],
         ),
@@ -145,14 +145,18 @@ class _BooksState extends State<Books> {
     );
   }
 }
+
 class _item extends StatelessWidget {
   final BookModel model;
+
   const _item({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){navigateTo(BookDetail(model: model));},
+      onTap: () {
+        navigateTo(BookDetail(model: model));
+      },
       child: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,9 +172,20 @@ class _item extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 8,),
-            Text(model.title,style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.white),),
-            Text(model.desc,style: TextStyle(fontSize: 10,color: Colors.white),)
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              model.title,
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white),
+            ),
+            Text(
+              model.desc,
+              style: TextStyle(fontSize: 10, color: Colors.white),
+            )
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
@@ -14,7 +15,8 @@ Future<dynamic> navigateTo(Widget page,
       MaterialPageRoute(builder: (context) => page), (route) => keepHistory);
 }
 
-enum MessageType {success, warning, error}
+enum MessageType { success, warning, error }
+
 void showMessage(String msg, {MessageType messageType = MessageType.success}) {
   ScaffoldMessenger.of(
     navigatorKey.currentContext!,
@@ -27,4 +29,11 @@ void showMessage(String msg, {MessageType messageType = MessageType.success}) {
             : Colors.red,
     duration: Duration(seconds: 1),
   ));
+}
+
+Future<void> openUrl(String url) async {
+  await launchUrl(Uri.parse(url)).catchError((ex) {
+    showMessage("Can't open the url", messageType: MessageType.error);
+    return false;
+  });
 }

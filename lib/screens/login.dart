@@ -73,7 +73,7 @@ class _LoginState extends State<Login> {
                 ),
                 AppButton(
                   onPressed: () {
-                    navigateTo(Views(),keepHistory: false);
+                    navigateTo(Views(), keepHistory: false);
                   },
                   text: "Login",
                 ),

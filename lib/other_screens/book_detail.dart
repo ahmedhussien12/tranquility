@@ -3,6 +3,7 @@ import 'package:secondproject/other_screens/books.dart';
 
 class BookDetail extends StatelessWidget {
   final BookModel model;
+
   const BookDetail({super.key, required this.model});
 
   @override

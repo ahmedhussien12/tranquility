@@ -78,7 +78,7 @@ class _QuotesState extends State<Quotes> {
                             (value) => print('copied'),
                           );
                           showMessage("Copied success",
-                              messageType: MessageType.error);
+                              messageType: MessageType.success);
                         },
                         label: Text("Copy"),
                         icon: AppImages("copy.svg"),

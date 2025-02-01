@@ -21,89 +21,88 @@ class _WhatsAppState extends State<WhatsApp>
   final list = [
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
     ChatsModel(
         ProfileImage:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17O1ilowE8NmMnG6dgiMEt4QbunQR6SJkw&s",
         title: "salma",
         subTitle: "hello salma",
         trailing: "10/12/2021"),
-
   ];
 
   @override
@@ -154,15 +153,18 @@ class _WhatsAppState extends State<WhatsApp>
                   Text("STATUS"),
                   Text("CALLS"),
                 ]),
-        Expanded(
-          child: ListView.separated(
-            padding: EdgeInsets.symmetric(vertical: 16),
-            itemBuilder: (context, index)=>_ChatItem(model: list[index],),
-            separatorBuilder: (context, index) => SizedBox(
-              height: 2,
-            ),
-            itemCount:list.length ,),
-        )
+            Expanded(
+              child: ListView.separated(
+                padding: EdgeInsets.symmetric(vertical: 16),
+                itemBuilder: (context, index) => _ChatItem(
+                  model: list[index],
+                ),
+                separatorBuilder: (context, index) => SizedBox(
+                  height: 2,
+                ),
+                itemCount: list.length,
+              ),
+            )
           ],
         ),
       ),
@@ -172,20 +174,46 @@ class _WhatsAppState extends State<WhatsApp>
 
 class _ChatItem extends StatelessWidget {
   const _ChatItem({super.key, required this.model});
-  final ChatsModel model;
 
+  final ChatsModel model;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-
       dense: true,
-      onTap: (){},
+      onTap: () {},
       splashColor: Color(0xff08B098).withOpacity(0.1),
-      leading: ClipOval(child: AppImages(model.ProfileImage,fit: BoxFit.cover,width: 40,height: 40,)),
-      title: Text(model.title*10,overflow:TextOverflow.ellipsis ,maxLines:1,style: TextStyle(fontSize: 13,fontWeight: FontWeight.w500,color: Colors.white),),
-      subtitle: Text(model.subTitle*10,overflow: TextOverflow.ellipsis,maxLines:1,style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Color(0xff9EA2A6)),),
-      trailing: Text(model.trailing,style: TextStyle(fontSize: 10,fontWeight: FontWeight.w500,color: Color(0xff9EA2A6),),),
+      leading: ClipOval(
+          child: AppImages(
+        model.ProfileImage,
+        fit: BoxFit.cover,
+        width: 40,
+        height: 40,
+      )),
+      title: Text(
+        model.title * 10,
+        overflow: TextOverflow.ellipsis,
+        maxLines: 1,
+        style: TextStyle(
+            fontSize: 13, fontWeight: FontWeight.w500, color: Colors.white),
+      ),
+      subtitle: Text(
+        model.subTitle * 10,
+        overflow: TextOverflow.ellipsis,
+        maxLines: 1,
+        style: TextStyle(
+            fontSize: 10,
+            fontWeight: FontWeight.w500,
+            color: Color(0xff9EA2A6)),
+      ),
+      trailing: Text(
+        model.trailing,
+        style: TextStyle(
+          fontSize: 10,
+          fontWeight: FontWeight.w500,
+          color: Color(0xff9EA2A6),
+        ),
+      ),
     );
   }
 }

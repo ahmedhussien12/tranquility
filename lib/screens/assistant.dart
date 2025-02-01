@@ -77,7 +77,10 @@ class Assistant extends StatelessWidget {
                   SizedBox(
                     height: 24,
                   ),
-                  AppButton(onPressed: (){},text: "Start Chat",)
+                  AppButton(
+                    onPressed: () {},
+                    text: "Start Chat",
+                  )
                 ],
               ),
             )

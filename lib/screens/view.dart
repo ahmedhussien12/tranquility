@@ -7,7 +7,6 @@ import 'package:secondproject/screens/home/views/Quotes.dart';
 import 'package:secondproject/screens/home/views/chats.dart';
 import 'package:secondproject/screens/home/views/profile.dart';
 import 'package:secondproject/screens/login.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Views extends StatefulWidget {
   const Views({super.key});
@@ -77,7 +76,7 @@ class _ViewsState extends State<Views> {
             ),
             SizedBox(height: 24),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 navigateTo(AboutUs());
               },
               child: Container(
@@ -103,15 +102,20 @@ class _ViewsState extends State<Views> {
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 16,),
+            SizedBox(
+              height: 16,
+            ),
             GestureDetector(
-              onTap: ()async{
-                await launchUrl(Uri.parse("https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&pli=1"));
+              onTap: () async {
+                await openUrl(
+                    "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&pli=1");
               },
               child: Container(
                 height: 56,
@@ -136,14 +140,18 @@ class _ViewsState extends State<Views> {
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 16,),
+            SizedBox(
+              height: 16,
+            ),
             GestureDetector(
-              onTap: (){},
+              onTap: () {},
               child: Container(
                 height: 56,
                 width: 312,
@@ -167,12 +175,16 @@ class _ViewsState extends State<Views> {
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 16,),
+            SizedBox(
+              height: 16,
+            ),
             Container(
               height: 56,
               width: 312,
@@ -196,7 +208,9 @@ class _ViewsState extends State<Views> {
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Switch(
                       value: isEasyLogin,
                       onChanged: (value) {
@@ -210,7 +224,7 @@ class _ViewsState extends State<Views> {
               height: 16,
             ),
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 navigateTo(Login());
               },
               child: Container(
