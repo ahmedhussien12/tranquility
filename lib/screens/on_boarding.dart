@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:secondproject/core/designs/app_images.dart';
+import 'package:secondproject/core/logic/cache_helper.dart';
 import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/main.dart';
 import 'package:secondproject/screens/login.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -68,6 +70,8 @@ class _OnBoardingState extends State<OnBoarding> {
                     if (currentPage != 3)
                       TextButton(
                         onPressed: () {
+                          CacheHelper.setNotFirstTime();
+
                           navigateTo(Login(), keepHistory: false);
                         },
                         child: Text("Skip"),
@@ -80,6 +84,7 @@ class _OnBoardingState extends State<OnBoarding> {
                               duration: Duration(seconds: 1),
                               curve: Curves.linear);
                         } else if (currentPage > 2) {
+                          CacheHelper.setNotFirstTime();
                           navigateTo(Login(), keepHistory: false);
                         }
                         setState(() {});

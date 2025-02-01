@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:secondproject/core/logic/cache_helper.dart';
 import 'package:secondproject/core/logic/helper.dart';
+import 'package:secondproject/main.dart';
+import 'package:secondproject/screens/login.dart';
 import 'package:secondproject/screens/on_boarding.dart';
 
 class Splash extends StatefulWidget {
@@ -15,7 +18,9 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), () {
-      navigateTo(OnBoarding(), keepHistory: false);
+      navigateTo(
+          CacheHelper.isFirstTime? OnBoarding() : Login(),
+          keepHistory: false);
     });
     super.initState();
   }
